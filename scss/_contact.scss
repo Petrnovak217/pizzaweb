@@ -1,0 +1,134 @@
+.contact-tittle{
+    @include heading-main(80px 0 20px 0 ,40px);
+    font-weight:600;
+}
+.card{
+    position: relative;
+    margin: 20px;
+    width: 50%; 
+    height: em(250px);
+    display: inline-block; 
+    background-image: linear-gradient(rgb(255, 123, 0),rgb(255, 72, 0));
+    color: #fff;
+    
+
+    i{
+        background-color:  #2e3133;
+        color: #ffffff;
+        font-size:em(18px) ;
+        width:em(40px) ;
+        height:em(40px) ;
+        border-radius: 50%;
+        text-align: center;
+        line-height:em(42px) ;
+        margin:em(15px)  em(15px) ;
+        vertical-align: middle;
+
+    }
+    p{  
+        font-size:em(19px) ;
+        display: inline-block;
+
+        a{
+           color: #fff;
+        }
+    }
+}
+
+
+.slider{
+    position: relative;
+    width: 400px;
+    height: 250px; 
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius:5px;
+
+    .slide img{
+        width: 100%; 
+        height: 100%;
+    }
+
+    .navigation{
+        display: flex;
+        position: absolute;
+        left: 5.5%;
+        bottom:5px;
+
+        .bar{ 
+            z-index: 50;  
+            width: 50px;
+            height: 10px;
+            border: 2px solid rgb(255, 255, 255);
+            margin: 10px;
+            cursor: pointer;
+            @include transition;
+
+            &:hover{
+                background: white;   
+            }       
+        }
+    }
+
+    input[name="r"]{
+        display: none;
+    }
+    input[name="g"]{
+        display: none;
+    }
+
+
+    .slides{
+    width:500%;
+    height:100%;
+    display:flex;
+    
+    
+        .slide {
+            width: 20%;
+            transition: 1s; 
+        }
+
+        #r1:checked ~ .s1 {
+            margin-left: 0;
+        }
+
+        #r2:checked ~ .s1 {
+            margin-left: -20%;    
+        }
+
+        #r3:checked ~ .s1 {
+            margin-left: -40%;
+        }
+
+        #r4:checked ~ .s1 {
+            margin-left: -60%;
+        }
+
+        #r5:checked ~ .s1 {
+            margin-left: -80%;
+        }
+
+        #g1:checked ~ .s2 {
+            margin-left: 0;
+        }
+
+        #g2:checked ~ .s2 {
+            margin-left: -20%;    
+        }
+
+        #g3:checked ~ .s2 {
+            margin-left: -40%;
+        }
+
+        #g4:checked ~ .s2 {
+            margin-left: -60%;
+        }
+
+        #g5:checked ~ .s2 {
+            margin-left: -80%;
+        }
+    }
+}
+

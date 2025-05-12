@@ -1,0 +1,160 @@
+//Heading
+.home{
+    @include background-page;
+    text-align: center;
+
+    &__text{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+       h1{
+            font-size: em(36px);
+            color: whitesmoke;
+            letter-spacing: em(2px);
+            margin-bottom: em(10px);
+    
+            span{
+                display: block;
+                font-size: em(45px);
+                color:orangered;
+                letter-spacing: em(1px);
+            }
+        }
+       
+        .btn{
+            display: inline-block;
+            text-decoration: none;  
+            color: white; 
+            font-size: em(25px);
+            margin-top:em(10px);
+                
+            &__facebook{
+                border: 2px solid rgb(14, 56, 243);
+                border-radius:em(20px);
+                padding:em(5px) em(20px);
+                background-image: linear-gradient(rgb(4, 29, 143),rgb(14, 56, 243));
+
+                &:hover{
+                    background-image: linear-gradient(rgb(12, 56, 251),rgba(0, 47, 255, 0.774));
+                }
+            }  
+            
+            &__instagram{
+                margin-left: em(15px);
+                border: 2px solid rgba(226, 34, 82, 0.726);
+                border-radius: em(20px);
+                padding: em(5px) em(20px);
+                background-image:linear-gradient(rgb(175, 70, 96),rgb(230, 24, 75));
+
+                &:hover{
+                    background-image: linear-gradient(rgb(228, 26, 76),rgba(226, 34, 82, 0.726));   
+                }
+            }   
+        }
+    }
+}
+//read more
+.read-more{
+    display: grid;
+
+    .boxs{
+        margin: 0 20px;
+    }
+    
+    &__box{
+        position: relative; 
+        padding: em(15px);
+        border-radius: 8px;
+        box-shadow: 1px 5px 10px 3px rgba(0, 0, 0, 0.301);         
+
+        &::before{
+            content: "";
+            position:absolute;
+            top: 0;
+            right: 0;
+            border: 20px solid transparent;
+            border-top:20px solid rgb(238, 95, 12);
+            border-right:20px solid rgb(238, 95, 12);
+        }
+      
+        h4{
+            margin-bottom:10px ;
+        }
+        .more{
+            font-size: em(17px);
+            line-height: em(28px);
+            height: em(85px);
+            overflow: hidden; 
+            outline: none;
+            
+          
+            &.moreOpen{      
+                height: auto;         
+            }
+        }
+
+        button{    
+            color: whitesmoke;
+            background-color: rgb(221, 131, 58);
+            text-decoration: none;
+            padding: em(10px) em(15px);
+            margin-top: em(15px);
+            border: 0;
+            border-radius:em(15px);
+            cursor: pointer;
+                
+            &::before{
+                content: "přečíst více";
+            }
+    
+            &.moreOpen{      
+                background-color: red;
+                &::before{
+                       content: "zobrazit méně"
+                }
+            }
+        }       
+    }   
+}
+
+
+
+//Recenze
+.reference{
+    display: inline-block;
+    @include reference-background;
+   
+    h2{
+        color: #fff;
+        padding-top:em(8px) ;
+    }
+
+    &-customer{
+        .one-referenc{
+            text-align: left;
+            color:#fff;
+            font-size: em(18px);
+            p{
+              font-style: italic;  
+            }
+            .photo-name {  
+                margin: 10px 0 50px 0  ;
+
+                img{
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    float: left;
+                }
+                p{
+                   padding-top:em(10px);
+                   margin-left:em(50px);
+                   font-style: normal;
+                }
+            }
+        }
+    }       
+}
+

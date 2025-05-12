@@ -1,0 +1,96 @@
+//footer
+
+.footer-discributed{
+    border-top: 2px solid $footer-border;
+    width: 100vw;
+    display: flex;
+    text-align: left;
+    padding:em(50px) em(55px) ;
+    background-color: rgb(10, 6, 6);
+    vertical-align: top; 
+    color: white;
+        
+    
+    &__left{
+        width:100%;
+       
+        h2{
+        font-size:em(80px);
+        font-weight: 650;
+            span{
+                color: $active;
+            }
+        }
+    
+        p{
+            font-size:em(14px) ;    
+        }
+    }
+        
+        //footer-center
+    &__center{
+        width: 100%;
+        
+        .contact-icon{     
+            margin-left: -10%;
+            
+            i{
+                display:inline-block;
+                background-color:  #33383b;
+                color: #ffffff;
+                font-size:em(15px) ;
+                width:em(40px) ;
+                height:em(40px) ;
+                border-radius: 50%;
+                text-align: center;
+                line-height:em(42px) ;
+                margin:em(10px)  em(15px) ;
+                vertical-align: middle;
+            }
+        }   
+
+        p{  
+            font-size:em(18px) ;
+            display: inline-block;
+    
+            a{
+                color: #fff;
+            }
+        }   
+    }
+    
+          //footer-right
+         &__right{
+             width: 38%;
+          
+           p{
+                line-height: 20px;
+                margin-bottom:em(10px);
+           }
+
+           .social-icons{
+            display: flex;
+            a{
+              color: #fff;
+              padding:em(10px);
+                 &:hover{
+                     background-color:$footer-icons-back;
+                    border-radius: 50%;
+                    &:nth-child(1){
+                        color: #1b46a3;
+                        
+                    }
+                    &:nth-child(2){  
+                        color:#033db9;
+                    }
+                    &:nth-child(3){ 
+                         color: rgb(223, 41, 72);
+                    }
+                    &:nth-child(4){  
+                         color: black;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.nav{ 
+    top: 0;
+    left: 0; 
+    width: 100%;
+    line-height: 10px;
+    
+    .background{
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        height: 55px;
+        background: rgba(138, 130, 130, 0.6); 
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(134, 118, 118, 0.53); 
+        @include transition 
+    }
+
+    .menu-nav{
+        position: fixed;
+        z-index: 100;
+        float: right; 
+        margin-left: 52%;
+        @include transition;
+        
+        &-item{
+            display: inline-block;
+            list-style-type: none;
+            text-transform: uppercase;
+            padding: em(28px) em(25px);
+            letter-spacing: 2px;
+            
+            &.active > a{
+                color: $active;
+                font-size: em(25px);     
+            }
+            
+        }
+
+        &-link{
+            font-size: em(20px);
+            line-height: 2px;
+            text-decoration: none;
+            color: rgba(248, 248, 248, 0.924);
+            border-bottom: 2px solid transparent;
+            @include transition;
+
+            &:hover{
+                color: #fff;
+                @include border;
+                @include transition;
+            }
+        }
+    }
+}
+
+.hamburger-menu{
+    position: fixed;
+    z-index: 5;
+    width: 40px;
+    height: 25px;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+    display: none;
+    -webkit-tap-highlight-color: transparent;
+    @include transition;
+
+    &__btn{
+        position: absolute;
+        top: 12px;
+        width: 40px;
+        height: 4px;
+        background-color: rgb(255, 102, 0);
+        border-radius: 2px;
+        @include transition;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 12px;
+            width: 30px;
+            height: 4px;
+            background-color: rgba(255, 102, 0, 0.863);
+            border-radius: 2px;
+            @include transition;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: -12px;
+            width: 35px;
+            height: 4px;
+            background-color: rgba(255, 102, 0, 0.842);
+            border-radius: 2px;
+            @include transition;
+        }
+
+        &.open {
+            transform: rotate(720deg);
+            background: transparent;
+      
+            &::before {
+              width: 35px;
+              transform: rotate(45deg) translate(5px, 5px);
+            }
+      
+            &::after {
+              width: 35px;
+              transform: rotate(-45deg) translate(-22px,22px);
+            }
+          }
+    }
+}

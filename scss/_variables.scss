@@ -1,0 +1,126 @@
+//Color
+$primeryColor:rgba(148, 59, 24, 0.808);
+$active:rgba(255, 60, 0, 0.993);
+$border:rgb(243, 129, 36);
+$footer-border: #fff;
+$footer-icons-back:white;
+$foto-border:rgb(156, 132, 101);
+
+
+
+
+
+//mixin
+@mixin heading-main ($margin:30px 0,$font-size:28px) {
+    text-align: center;
+    font-size: $font-size;
+    color: $primeryColor;
+    margin: $margin;
+    &::after{
+        content: "";
+        width: em(100px);
+        display: block;
+        margin: 0 auto;
+        margin-top:em(5px) ;
+        border-bottom: 3px solid $border;
+    }
+}
+
+@mixin transition {
+    transition: all 0.5s ease-in-out;
+} 
+
+@mixin background-page{
+    width: 100vw;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+     url("/images/pizza-3007395_1920.jpg");
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
+}
+
+@mixin reference-background {
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+     url("/images/pizza-3007395_1920.jpg");
+     background-attachment: fixed;
+     background-position: center;
+     background-size: cover;
+}
+
+@mixin border($border:2px solid rgb(246, 116, 9)) {
+    border-bottom: $border;
+}
+
+//function
+@function em($pixel,$value:16px){
+    @return ($pixel/$value)  * 1em;
+}
+
+@function col-width($columns: 12,$page-widt: 100%,$gap: 0.01%){
+    @return ($page-widt - $gap * ($columns - 1 )) / $columns 
+};
+
+
+
+
+
+//Responzive designe
+
+//medium
+@mixin extralarge{
+    @media screen and (min-width:2500px){
+        @content;
+    }
+}
+
+@mixin large{
+    @media screen and (max-width:1400px){
+        @content;
+    }
+}
+@mixin medium {
+    @media screen and (max-width:1180px){
+        @content;
+    }
+}
+
+@mixin medium2 {
+    @media screen and (max-width:900px){
+        @content;
+    }
+}
+
+@mixin medium3 {
+    @media screen and (max-width:800px){
+        @content;
+    }
+}
+
+
+@mixin medium4{
+    @media screen and (max-width:785px){
+        @content;
+    }
+}
+
+@mixin small {
+    @media  screen and (max-width:730px){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media  screen and (max-width:480px){
+        @content;
+    }
+}
+@mixin mobile-extra-small {
+    @media  screen and (max-width:300px){
+        @content;
+    }
+}
+
+
+

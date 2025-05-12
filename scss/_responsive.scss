@@ -1,0 +1,471 @@
+@include extralarge{
+    //home-page
+    .home{
+        &__text{
+            h1{
+                font-size: em(45px); 
+                letter-spacing: em(3px);
+            }
+           
+            .btn{
+                font-size: em(35px);
+            }
+        }  
+    }
+
+    .read-more{
+        &__box{
+            h4{
+                font-size: 22px;
+            }
+            .more{
+                font-size: em(19px);
+                line-height: em(28px);
+            }
+    
+            button{        
+                font-size: 18px;    
+            }       
+        }   
+    }
+
+    .reference{
+        &-customer{
+            .one-referenc{
+                font-size: em(22px);
+            }
+        }       
+    }
+
+    //price-page
+    .card-deck{
+        table{
+            font-size: 23px;
+        }
+    }
+
+    //footer
+    .footer-discributed{
+        
+
+        &__left{
+             
+            h2{
+                font-size:em(100px);         
+            }
+        
+            p{
+                font-size:em(18px) ;    
+            }
+        }
+            
+            //footer-center
+        &__center{
+            
+            .contact-icon{      
+
+                i{      
+                    font-size:em(20px) ;
+                }
+            }   
+    
+            p{  
+                font-size:em(22px) ;   
+            }   
+        }   
+
+    }
+}
+
+@include large{
+    //Navigation
+    .hamburger-menu{
+        display: inline-block;
+        z-index: 500;
+
+    }
+
+    .nav{
+        z-index: 100;
+        margin: 0;
+
+        .background{
+            display: none;        
+        }
+        
+        .menu-nav{ 
+            z-index: 100;
+            margin-left: 0; 
+            display: block;
+            width: 100%;
+            background-color: gray;
+            border-bottom: 3px solid rgb(204, 60, 3);
+            transform: translateY(-100%);
+    
+            &.open{ 
+              transform: translateY(0);
+            }
+    
+            &-item{
+                width: 100%;
+                display: block;
+                font-size:18px; 
+                transform: translateY(-100%);
+                @include transition;
+          
+              &.open{
+                transform: translateY(0);
+              }
+            }
+        }
+    }
+
+    //Navigation
+
+    .home{
+        h1{
+            font-size: em(30px);
+            letter-spacing: 0.2;
+            margin-bottom: em(10px);
+        }
+    }
+}
+
+@include medium{
+
+    .read-more{
+        .col.span-1-of-3.read-more__box{
+            width: 100%;
+            margin: 15px 1px;
+        }
+    }
+         
+    .reference{   
+        &-customer{
+            
+            .col.span-1-of-3.one-referenc{
+                width: 45.8%;
+                margin: 15px 15px;
+            }
+            .one-referenc:nth-child(3){
+                display: none;
+            }
+        }
+    } 
+
+    //footer
+    .footer-discributed{
+        position: relative; 
+               
+        &__left{
+            h2{
+                font-size: em(70px);
+            }
+            p{
+                margin-bottom: 70px; 
+            }
+        }
+
+        &__center{
+            margin-left: 8%;
+
+            .contact-icon{     
+                i{  
+                    font-size: em(15px);
+                }
+
+                p{  
+                    font-size:em(15px) ;
+                }
+            }       
+           
+        }
+
+        &__right{  
+            position: absolute;
+            left: 4.5em;
+            bottom: 3.7em; 
+
+            p{
+                display: none;
+            }
+        }      
+    }
+}
+
+@include medium2{
+
+    //contact   
+    .contact-card{
+      
+        .card{   
+            width: 100%;        
+        }
+
+        .slider{  
+            width: 460px;  
+            margin: 0 auto;
+            margin-bottom: 10px;
+           
+            .navigation{
+                left: 12%;    
+            }
+        }
+    }   
+}
+
+@include medium3{
+
+    //fotogaleri
+    .col.span-1-of-4.photo-segment__item{
+        width: 47.83%;
+        margin: 3px 5px ;
+    }
+}
+
+@include medium4{
+    .home{
+        &__text{
+            top: 50%;
+            h1{
+                font-size: em(28px);
+                letter-spacing: 5px;
+                margin-bottom: 20px;
+            }
+
+            .btn{
+                display: block;
+                margin: 20px 0;
+            }
+        }
+    }
+
+    .reference{   
+        &-customer{
+            .col.span-1-of-3.one-referenc{
+                width: 88%;
+                margin: 15px 20px;
+
+            }
+
+            .one-referenc:nth-child(3){
+                display: block;
+            }
+            
+        }
+    } 
+}
+
+@include small{
+
+    .card-deck{   
+        flex-direction: column;
+        width: 100%;
+        
+        .card{
+            width: 95%; 
+
+            table{
+                font-size: 13px;
+            }
+        }
+    }
+
+    
+    .footer-discributed{          
+        flex-direction: column;
+        width: 100%;
+
+        &__left{
+         
+           p{
+               margin-bottom: 20px;   
+            }
+        }
+
+        &__center{
+           margin-bottom: 20px;           
+        }
+            .contact-icon{
+                i{  
+                    font-size: em(14px);
+                   
+                }
+
+                p{  
+                    font-size:em(20px) ;
+                }
+            } 
+           
+            &__right{ 
+              font-size: 12px;
+              bottom: 20px;
+                
+            }  
+    }
+}
+
+@include mobile{
+    .home{
+        &__text{
+            h1{
+                font-size: em(25px);
+            }
+
+            .btn{
+                display: block;
+                margin: 20px 0;
+            }
+        }
+    }
+    //fotogaleri
+    .col.span-1-of-4.photo-segment__item{
+        width: 95%;
+        margin: 1px 8px;
+    }
+
+    //contact
+    .contact-card{
+        .card{  
+            display: flex; 
+            align-items: center;
+            justify-content: center; 
+            height: 200px;
+            margin:10px;
+            
+            i{
+                font-size: 12px;
+            }  
+            
+            p{
+                font-size:13px;
+            }
+        }
+    
+        .slider{     
+            width: 300px;
+            height: 200px; 
+
+            .navigation{
+                left:2%;
+                .bar{
+                    width: 38px;
+                }
+            }
+        }
+    }
+    
+
+    //footer
+    .footer-discributed{          
+        flex-direction: column;
+
+        &__left{
+            h2{
+                font-size: em(55px);
+            }
+           p{
+               font-size: em(10px);   
+            }
+        }
+
+        &__center{
+           margin-bottom: 20px; 
+           
+           .contact-icon{
+                i{  
+                    font-size: em(10px);
+                }
+
+                p{  
+                    font-size:em(11px) ;
+                }
+            } 
+        }     
+    }
+}
+
+
+@include mobile-extra-small{
+    //home-page
+    .home{
+        .btn{
+            font-size: em(20px);
+            margin: 20px 10px;
+        }
+    }
+
+    //price-list
+    .card-deck{      
+        
+        .card{
+            width: 100%; 
+
+            table{
+                font-size: 12px;
+            }
+        }
+    }
+
+    //contact
+    .contact-tittle{
+        font-size: 30px;
+    }
+    .contact-card{
+        .card{  
+        
+            i{
+                font-size: 10px;
+            }  
+            
+            p{
+                font-size:12px;
+            }
+        }
+    
+        .slider{     
+            width: 265px;
+            height: 180px;
+
+            .navigation{
+                left: 1%;
+                .bar{
+                    width: 33px;
+                }
+            }
+        }
+    }
+
+    //foooter
+    
+    .footer-discributed{          
+       
+        &__left{
+            h2{
+                font-size: em(50px);
+            }
+           p{
+               font-size: em(8px);   
+            }
+        }
+
+        &__center{ 
+           
+           .contact-icon{
+                i{  
+                    font-size: em(7px);
+                }
+
+                p{  
+                    font-size:em(9.5px) ;
+                }
+            } 
+        }     
+    }
+}
+
+
+
+         
+
+ 
